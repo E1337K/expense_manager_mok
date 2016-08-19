@@ -12,10 +12,21 @@
 # It's strongly recommended that you check this file into your version control system.
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160817131334) do
 =======
 ActiveRecord::Schema.define(version: 20160818120622) do
 >>>>>>> 86f1cd97fa16bb7093f48981553eb6e51cca426a
+=======
+ActiveRecord::Schema.define(version: 20160819165658) do
+
+  create_table "budgets", force: :cascade do |t|
+    t.decimal  "value"
+    t.date     "budget_date"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+>>>>>>> e8cbee17bbf25c3eae2b682e6e7d4fb3de46c97c
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
