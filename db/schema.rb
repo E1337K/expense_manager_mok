@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20160817131334) do
+=======
+ActiveRecord::Schema.define(version: 20160818120622) do
+>>>>>>> 86f1cd97fa16bb7093f48981553eb6e51cca426a
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -68,6 +72,11 @@ ActiveRecord::Schema.define(version: 20160817131334) do
     t.datetime "locked_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
+    t.string   "username"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
