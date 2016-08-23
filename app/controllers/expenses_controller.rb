@@ -2,10 +2,11 @@ class ExpensesController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @expenses = Expense.all
+   @search = Expense.search(params[:q])
+   @expenses = @search.result
+   # @expenses = Expense.all
   end
-
-  def show
+    def show
     @expense = Expense.find(params[:id])
   end
 
